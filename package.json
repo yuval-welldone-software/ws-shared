@@ -1,7 +1,7 @@
 {
   "name": "ws-shared",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc --project ./tsconfig.prod.json",
