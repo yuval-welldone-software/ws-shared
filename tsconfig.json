@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext", 
+    "lib": ["es6", "dom", "dom.iterable" ],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext", 
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true, 
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "baseUrl": "./src/",
+    "rootDir": "./",
+    "outDir": "dist", 
+    "declaration": true,
+    "strictNullChecks": true,
+    "plugins": [
+      {
+        "name": "@styled/typescript-styled-plugin"
+      }
+    ],
+    "typeRoots": ["./node_modules/@types", "/src/types/"],
+    
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist/*"]
+
+}
