@@ -1,6 +1,6 @@
 {
   "name": "ws-shared",
-  "version": "0.1.0",
+  "version": "0.1.10",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
