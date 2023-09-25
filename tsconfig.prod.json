@@ -27,7 +27,7 @@
         "name": "@styled/typescript-styled-plugin"
       }
     ],
-    "typeRoots": ["./node_modules/@types", "/src/types/"],
+    "typeRoots": ["./node_modules/@types", "/src/types/"]
     
   },
   "$schema": "https://json.schemastore.org/tsconfig",
