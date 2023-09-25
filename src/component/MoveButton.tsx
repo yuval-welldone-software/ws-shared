@@ -31,7 +31,7 @@ const MoveButton = ({ stopMove }: MoveButtonProps) => {
     <button
       className="moving-button"
       onMouseMove={handleMouseMove}
-      style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`, backgroundColor: 'red' }}
+      style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`, backgroundColor: 'blue' }}
     >
       Click Me!
     </button>
