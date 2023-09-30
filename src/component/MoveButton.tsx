@@ -41,4 +41,6 @@ export const MoveButton = ({ stopMove, label="Move" }: MoveButtonProps) => {
   );
 };
 
+export default MoveButton;
+
 
