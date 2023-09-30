@@ -1,7 +1,7 @@
 import React, { useState,useEffect, useCallback } from "react";
 
 type MoveButtonProps  =  { stopMove: boolean };
-const MoveButton = ({ stopMove }: MoveButtonProps) => {
+export const MoveButton = ({ stopMove }: MoveButtonProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = useCallback(() => {
@@ -38,4 +38,4 @@ const MoveButton = ({ stopMove }: MoveButtonProps) => {
   );
 };
 
-export default MoveButton;
+

@@ -1,7 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import MoveButton from './component/MoveButton';
+import { MoveButton } from 'component/MoveButton';
+
 
 function App() {
   return (
