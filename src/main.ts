@@ -1,3 +1,3 @@
-import  MoveButton from './component/MoveButton'
+import  WSMoveButton from './component/WSMoveButton'
 
-export { MoveButton }
+export { WSMoveButton }

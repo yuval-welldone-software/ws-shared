@@ -2,9 +2,9 @@ import React, { useState,useEffect, useCallback } from "react";
 import Button from '@mui/material/Button';
 
 
-type MoveButtonProps  =  { stopMove: boolean, label?: string };
+type WSMoveButtonProps  =  { stopMove: boolean, label?: string };
 
-export const MoveButton = ({ stopMove, label="Move" }: MoveButtonProps) => {
+export const WSMoveButton = ({ stopMove, label="Move" }: WSMoveButtonProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = useCallback(() => {
@@ -41,6 +41,5 @@ export const MoveButton = ({ stopMove, label="Move" }: MoveButtonProps) => {
   );
 };
 
-export default MoveButton;
-
+export default WSMoveButton;
 
