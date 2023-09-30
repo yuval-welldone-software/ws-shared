@@ -1,4 +1,3 @@
-import { MoveButton } from "component/MoveButton";
-
+import  MoveButton from './component/MoveButton'
 
 export { MoveButton }
