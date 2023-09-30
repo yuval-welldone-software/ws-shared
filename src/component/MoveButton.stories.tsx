@@ -15,6 +15,7 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     stopMove: { defaultValue: false },
+    label: { defaultValue: "Catch me if you can" }
   },
 } satisfies Meta<typeof MoveButton>;
 
@@ -24,5 +25,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     stopMove: true,   
+    label: "Catch me if you can"
   },
 };

@@ -1,7 +1,10 @@
 import React, { useState,useEffect, useCallback } from "react";
+import Button from '@mui/material/Button';
 
-type MoveButtonProps  =  { stopMove: boolean };
-export const MoveButton = ({ stopMove }: MoveButtonProps) => {
+
+type MoveButtonProps  =  { stopMove: boolean, label?: string };
+
+export const MoveButton = ({ stopMove, label="Move" }: MoveButtonProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = useCallback(() => {
@@ -28,13 +31,13 @@ export const MoveButton = ({ stopMove }: MoveButtonProps) => {
   }, [stopMove, handleMouseMove]);
 
   return (
-    <button
+    <Button variant="contained"
       className="moving-button"
       onMouseMove={handleMouseMove}
       style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`, backgroundColor: 'blue' }}
     >
-      Click Me!
-    </button>
+      {label}
+    </Button>
   );
 };
 
