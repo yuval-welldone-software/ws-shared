@@ -1,3 +1,4 @@
+import WSCheckbox from './component/WSCheckbox'
 import  WSMoveButton from './component/WSMoveButton'
 
-export { WSMoveButton }
+export { WSMoveButton, WSCheckbox }

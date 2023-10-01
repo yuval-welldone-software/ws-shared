@@ -1,12 +1,21 @@
-import React, { useState,useEffect, useCallback } from "react";
-import Button from '@mui/material/Button';
+import React, { useState, useEffect, useCallback } from "react";
+import Button from "@mui/material/Button";
 
+type WSMoveButtonProps = {
+  stopMove: boolean;
+  label?: string;
+  startPos?: { x: number; y: number };
+  stopMoveColor?: string;
+};
 
-type WSMoveButtonProps  =  { stopMove: boolean, label?: string };
-
-export const WSMoveButton = ({ stopMove, label="Move" }: WSMoveButtonProps) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
+const WSMoveButton = ({
+  stopMove,
+  label = "Move",
+  startPos = { x: 500, y: 500 },
+  stopMoveColor= 'red'
+}: WSMoveButtonProps) => {
+  const [position, setPosition] = useState(startPos);
+  
   const handleMouseMove = useCallback(() => {
     if (!stopMove) {
       const buttonWidth = 100; // Adjust to match button's width
@@ -20,21 +29,29 @@ export const WSMoveButton = ({ stopMove, label="Move" }: WSMoveButtonProps) => {
 
       setPosition({ x: randomX, y: randomY });
     }
-  },[stopMove]);
+  }, [stopMove]);
 
   useEffect(() => {
-    window.addEventListener('resize', handleMouseMove);
+    window.addEventListener("resize", handleMouseMove);
 
     return () => {
-      window.removeEventListener('resize', handleMouseMove);
+      window.removeEventListener("resize", handleMouseMove);
     };
   }, [stopMove, handleMouseMove]);
 
+  
   return (
-    <Button variant="contained"
+    <Button
+      variant="contained"
       className="moving-button"
       onMouseMove={handleMouseMove}
-      style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`, backgroundColor: 'blue' }}
+      style={{
+        position: "absolute",
+        left: stopMove ? `${startPos.x}%` : `${position.x}px`,
+        top: stopMove ? `${startPos.y}%` : `${position.y}px`,
+        backgroundColor: `${stopMove ? "blue" : stopMoveColor}`,
+        transform: `translate(-50%, -50%)`
+      }}
     >
       {label}
     </Button>
@@ -42,4 +59,3 @@ export const WSMoveButton = ({ stopMove, label="Move" }: WSMoveButtonProps) => {
 };
 
 export default WSMoveButton;
-

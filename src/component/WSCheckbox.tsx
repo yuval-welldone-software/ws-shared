@@ -3,33 +3,9 @@ import { useState, ChangeEvent } from "react";
 
 type WSCheckboxProps = { label?: string, onChange?: (checked: boolean)=>void };
 
-export const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
-  // const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  // const handleMouseMove = useCallback(() => {
-  //   if (!stopMove) {
-  //     const buttonWidth = 100; // Adjust to match button's width
-  //     const buttonHeight = 50; // Adjust to match button's height
-
-  //     const maxX = window.innerWidth - buttonWidth;
-  //     const maxY = window.innerHeight - buttonHeight;
-
-  //     const randomX = Math.random() * maxX;
-  //     const randomY = Math.random() * maxY;
-
-  //     setPosition({ x: randomX, y: randomY });
-  //   }
-  // },[stopMove]);
-
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleMouseMove);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleMouseMove);
-  //   };
-  // }, [stopMove, handleMouseMove]);
-
-  const [checked, setChecked] = useState(true);
+const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
+  
+  const [checked, setChecked] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
@@ -39,7 +15,7 @@ export const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
   return (
     <FormControlLabel
       control={
-        <Checkbox defaultChecked checked={checked} onChange={handleChange} />
+        <Checkbox checked={checked} onChange={handleChange} />
       }
       label={label}
     />
