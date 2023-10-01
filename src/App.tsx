@@ -1,7 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import MoveButton from './component/MoveButton';
+import { WSMoveButton } from 'component/WSMoveButton';
+
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <MoveButton stopMove={false} />
+      <WSMoveButton stopMove={false} />
     </div>
   );
 }
