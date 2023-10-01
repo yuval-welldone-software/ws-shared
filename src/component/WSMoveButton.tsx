@@ -8,7 +8,7 @@ type WSMoveButtonProps = {
   stopMoveColor?: string;
 };
 
-const WSMoveButton = ({
+export const WSMoveButton = ({
   stopMove,
   label = "Move",
   startPos = { x: 500, y: 500 },
@@ -58,4 +58,4 @@ const WSMoveButton = ({
   );
 };
 
-export default WSMoveButton;
+
