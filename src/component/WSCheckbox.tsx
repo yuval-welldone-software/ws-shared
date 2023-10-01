@@ -3,7 +3,7 @@ import { useState, ChangeEvent } from "react";
 
 type WSCheckboxProps = { label?: string, onChange?: (checked: boolean)=>void };
 
-const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
+export const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
   
   const [checked, setChecked] = useState(false);
 
@@ -22,4 +22,4 @@ const WSCheckbox = ({ label = "Check", onChange }: WSCheckboxProps) => {
   );
 };
 
-export default WSCheckbox;
+
