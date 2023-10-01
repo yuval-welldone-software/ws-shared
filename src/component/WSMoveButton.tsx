@@ -11,7 +11,7 @@ type WSMoveButtonProps = {
 export const WSMoveButton = ({
   stopMove,
   label = "Move",
-  startPos = { x: 500, y: 500 },
+  startPos = { x: 50, y: 50 },
   stopMoveColor= 'red'
 }: WSMoveButtonProps) => {
   const [position, setPosition] = useState(startPos);
