@@ -5,14 +5,16 @@ type WSMoveButtonProps = {
   stopMove: boolean;
   label?: string;
   startPos?: { x: number; y: number };
-  stopMoveColor?: string;
+  // moveColor?: string;
+  // stopMoveColor?: string;
 };
 
 export const WSMoveButton = ({
   stopMove,
   label = "Move",
   startPos = { x: 50, y: 50 },
-  stopMoveColor= 'red'
+  // moveColor = 'blue',
+  // stopMoveColor = 'red'
 }: WSMoveButtonProps) => {
   const [position, setPosition] = useState(startPos);
   
@@ -49,7 +51,7 @@ export const WSMoveButton = ({
         position: "absolute",
         left: stopMove ? `${startPos.x}%` : `${position.x}px`,
         top: stopMove ? `${startPos.y}%` : `${position.y}px`,
-        backgroundColor: `${stopMove ? "blue" : stopMoveColor}`,
+        backgroundColor: `${stopMove ? "blue" : "red"}`, // stopMove ? moveColor : stopMoveColor
         transform: `translate(-50%, -50%)`
       }}
     >
