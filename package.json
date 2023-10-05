@@ -1,6 +1,6 @@
 {
   "name": "ws-shared",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc --project ./tsconfig.prod.json",
