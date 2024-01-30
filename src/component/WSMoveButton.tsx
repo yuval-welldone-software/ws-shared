@@ -51,7 +51,8 @@ export const WSMoveButton = ({
         position: "absolute",
         left: stopMove ? `${startPos.x}%` : `${position.x}px`,
         top: stopMove ? `${startPos.y}%` : `${position.y}px`,
-        backgroundColor: `${stopMove ? "blue" : "red"}`, // stopMove ? moveColor : stopMoveColor
+        backgroundColor: `${stopMove ? "blue" : "red"}`, 
+        // backgroundColor: `${stopMove ? stopMoveColor : moveColor}`,
         transform: `translate(-50%, -50%)`
       }}
     >
